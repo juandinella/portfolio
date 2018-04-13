@@ -2,10 +2,10 @@ import asyncFonts from './asyncFonts'
 
 asyncFonts({
   href: 'assets/css/fonts.css',
-  observer: 'futuramedium'
+  observer: 'futura_md_btmedium'
 })
 
 asyncFonts({
   href: 'assets/css/fonts.css',
-  observer: 'futurabold'
+  observer: 'futura_ltbold'
 })

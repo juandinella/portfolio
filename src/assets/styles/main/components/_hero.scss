@@ -1,8 +1,74 @@
 .hero {
-  margin-top: rem(210);
-  
+  height: 100%;
+  display: flex;
+  align-items: center;
+
   .container {
     max-width: rem(706);
     padding: 0 rem(30);
+  }
+
+  h1 {
+    font-family: $font-bold;
+    font-size: rem(100);
+    margin-bottom: rem(14);
+  }
+
+  p {
+    font-size: rem(18);
+    line-height: 1.5;
+    margin-bottom: rem(30);
+  }
+
+  ul {
+    li {
+      display: inline-block;
+      margin-right: rem(25);
+
+      svg {
+        transition: all .225s ease;
+      }
+    }
+
+    .tw {
+      &:hover {
+        a svg {
+          stroke: #00aced;
+        }
+      }
+    }
+
+    .fb {
+      &:hover {
+        a svg {
+          stroke: #3B5998;
+        }
+      }
+    }
+
+    .ig {
+      &:hover {
+        a svg {
+          stroke: #8a49a1;
+        }
+      }
+    }
+
+    .in {
+      &:hover {
+        a svg {
+          stroke: #4875B4;
+        }
+      }
+    }
+
+
+    .gh {
+      &:hover {
+        a svg path{
+          stroke: #333333;
+        }
+      }
+    }
   }
 }
