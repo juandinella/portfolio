@@ -1,5 +1,11 @@
+import asyncFonts from './asyncFonts'
 
-// Here we are importing the whole app
-// read more about modules here:
-// http://wesbos.com/javascript-modules/
-import './app'
+asyncFonts({
+  href: 'assets/css/fonts.css',
+  observer: 'futuramedium'
+})
+
+asyncFonts({
+  href: 'assets/css/fonts.css',
+  observer: 'futurabold'
+})

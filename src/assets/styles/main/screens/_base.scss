@@ -1,0 +1,20 @@
+*, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+  font-family: $font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font: inherit;
+  line-height: inherit;
+}
+
+img {
+  max-width: 100%;
+}

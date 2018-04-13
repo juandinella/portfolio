@@ -25,10 +25,11 @@
     "del": "^3.0.0",
     "eslint": "^4.19.1",
     "eslint-loader": "^2.0.0",
+    "fontfaceobserver": "^2.0.13",
     "fs-path": "^0.0.24",
     "gulp": "^4.0.0",
-    "jquery": "^3.3.1",
     "gulp-zip": "^4.1.0",
+    "jquery": "^3.3.1",
     "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^4.5.0",
     "yargs": "^11.0.0"
