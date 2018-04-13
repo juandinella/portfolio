@@ -1,0 +1,23 @@
+// =======================================
+// =            Global Config            =
+// =======================================
+
+// Typography
+$system-fonts: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$font: 'Poppins', sans-serif;
+
+// Colors
+$black: #1E1D1C;
+$white: white;
+$yellow: #F9DE35;
+
+// Breakpoints
+$breakpoints: (
+  xs: 20em,
+  sm: 30em,
+  md: 64em,
+  lg: 81em,
+) !default;
+
+$columns: 12;
+$column-gutter: 30px;
