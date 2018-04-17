@@ -72,3 +72,14 @@
     }
   }
 }
+
+.scroll {
+  position: absolute;
+  bottom: 4%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: block;
+  width: rem(34);
+  text-align: center;
+}
