@@ -12,10 +12,8 @@ html(lang='en')
     link(rel="shortcut icon" href="assets/head/favicon.ico")
     link(rel="icon" type="image/png" href="assets/head/favicon.png")
     if production
-      link(rel='stylesheet', href='assets/css/vendor.min.css')
       link(rel='stylesheet', href='assets/css/main.min.css')
     else
-      link(rel='stylesheet', href='assets/css/vendor.css')
       link(rel='stylesheet', href='assets/css/main.css')
     block head
       //- If extra head content is necessary per page, it can be added per screen
@@ -30,6 +28,6 @@ html(lang='en')
     block footer
       //- If extra footer content is necessary per page, it can be added per screen
 
-    script(src='assets/js/main.js')
+    script(src='assets/js/main.js' async)
     block scripts
       //- Also if more scripts are needed you can hook in here <3

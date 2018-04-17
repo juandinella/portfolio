@@ -20,8 +20,9 @@
     "@babel/runtime": "^7.0.0-beta.44",
     "@pixel2html/babel-preset": "^1.0.0",
     "@pixel2html/eslint-config": "^1.5.0",
-    "@pixel2html/pipes": "^2.0.0",
+    "@pixel2html/pipes": "^2.1.1",
     "babel-loader": "8.0.0-beta.2",
+    "critical": "^1.2.2",
     "del": "^3.0.0",
     "eslint": "^4.19.1",
     "eslint-loader": "^2.0.0",
@@ -29,7 +30,6 @@
     "fs-path": "^0.0.24",
     "gulp": "^4.0.0",
     "gulp-zip": "^4.1.0",
-    "jquery": "^3.3.1",
     "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^4.5.0",
     "yargs": "^11.0.0"
