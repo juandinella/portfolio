@@ -6,9 +6,13 @@ html {
   min-height: 100%;
   height: 100%;
   position: relative;
-  font-family: $font;
+  font-family: $system-fonts;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &.futura-loaded {
+    font-family: $font;
+  }
 }
 
 body {
