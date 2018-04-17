@@ -99,6 +99,10 @@
       padding: 0 rem(20);
 
       @include breakpoint(md) {
+        padding: 0 0 0 rem(40);
+      }
+
+      @include breakpoint(lg) {
         padding: 0 0 0 rem(60);
       }
     }
@@ -113,6 +117,10 @@
       padding: 0 rem(20);
 
       @include breakpoint(md) {
+        padding: 0 rem(40) 0 0;
+      }
+
+      @include breakpoint(lg) {
         padding: 0 rem(60) 0 0 ;
       }
     }
