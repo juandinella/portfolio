@@ -1,11 +1,18 @@
 .hero {
-  height: 100%;
+  height: auto;
   display: flex;
   align-items: center;
+  padding: rem(30) 0;
+
+  @include breakpoint(md) {
+    height: 100%;
+    padding: 0;
+  }
 
   .container {
     max-width: rem(706);
     padding: 0 rem(30);
+
   }
 
   h1 {
