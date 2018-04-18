@@ -12,11 +12,7 @@ const productionPlugins = [
   }),
   new UglifyJSPlugin({sourceMap: true}),
   new GenerateSW({
-    globDirectory: 'dist',
-    globPatterns: [
-      // Cache everything except sourceMaps
-      '**/!(*.map)'
-    ],
+    exclude: ['**/!(*.map)'],
     swDest: path.join('dist', 'sw.js'),
     clientsClaim: true,
     skipWaiting: true
