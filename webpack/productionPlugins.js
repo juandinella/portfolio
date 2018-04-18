@@ -1,6 +1,6 @@
 const webpack = require('webpack')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-const { GenerateSW } = require('workbox-webpack-plugin')
+const { InjectManifest } = require('workbox-webpack-plugin')
 const path = require('path')
 
 const productionPlugins = [
@@ -11,7 +11,7 @@ const productionPlugins = [
     }
   }),
   new UglifyJSPlugin({sourceMap: true}),
-  new GenerateSW({
+  new InjectManifest({
     globDirectory: 'dist',
     globPatterns: [
       // Cache everything except sourceMaps
