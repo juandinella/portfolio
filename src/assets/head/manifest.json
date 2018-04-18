@@ -1,5 +1,5 @@
 {
-  "short_name": "Juan Di Nella",
+  "short_name": "JD Portfolio",
   "name": "Juan Di Nella's portfolio",
   "start_url": "/",
   "display": "standalone",
@@ -10,7 +10,7 @@
     {
       "src": "/assets/head/favicon.png",
       "type": "image/png",
-      "sizes": "500x500"
+      "sizes": "512x512"
     }
   ]
 }
