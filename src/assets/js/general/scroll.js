@@ -6,6 +6,4 @@ const scrollTo = (element) => {
   });
 }
 
-document.getElementById('scroll').addEventListener('click', () => {
-  scrollTo(document.getElementById('works'));
-});
+export default scrollTo

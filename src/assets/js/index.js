@@ -1,12 +1,10 @@
-import asyncFonts from './asyncFonts'
-import registerServiceWorker from './registerServiceWorker'
-import './scroll'
+// import registerServiceWorker from './registerServiceWorker'
+// import './blurryImg'
+// import './scroll'
+import app from './app.js'
 
-asyncFonts({
-  href: 'assets/css/fonts.css',
-  observer: 'futura'
-})
+app()
 
-if (process.env.NODE_ENV === 'production') {
-  registerServiceWorker()
-}
+// if (process.env.NODE_ENV === 'production') {
+//   registerServiceWorker()
+// }
