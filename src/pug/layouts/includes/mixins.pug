@@ -8,6 +8,9 @@ mixin h(htmlElement, module)
 //- Thanks WesBos!
 mixin svg(filename)
   !=icon(filename)
-
+  
 mixin img(name, alt)
   img(src=`assets/images/${name}` alt= alt ? alt : 'An image')
+
+mixin img(name, alt)
+  !=blur(name, alt)
