@@ -1,9 +1,8 @@
 const gulp = require('gulp')
 const config = require('../config')
 const production = config.production
+const fs = require('fs')
 const pug = require('@pixel2html/pipes').pug
-
-const { blur, icon } = require('./pugHelpers')
 
 gulp.task('markup', () =>
   gulp.src(config.directories.src.markup + '/*.pug')
@@ -11,9 +10,8 @@ gulp.task('markup', () =>
       pug: {
         basedir: config.directories.src.markup,
         locals: {
-          icon,
-          production,
-          blur
+          icon: name => fs.readFileSync(`./src/assets/icons/${name}.svg`),
+          production
         }
       },
       cssModules: `./${config.directories.src.cssModules}`,
