@@ -10,8 +10,24 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  h1 {
+    font-weight: 900;
+  }
+
+  p {
+    font-weight: 600;
+  }
+
   &.futura-loaded {
     font-family: $font;
+
+    h1 {
+      font-weight: 700;
+    }
+
+    p {
+      font-weight: 500;
+    }
   }
 }
 
