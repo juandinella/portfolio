@@ -67,8 +67,9 @@ a {
 }
 
 ::selection {
-  background-color: $black;
+  background-color: rgba($black,0.99);
   color: $white;
+  opacity: 1;
 }
 
 
