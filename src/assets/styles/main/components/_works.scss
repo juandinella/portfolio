@@ -77,6 +77,32 @@
       }
     }
 
+    a {
+      margin-top: rem(40);
+      display: flex;
+      align-items: center;
+      font-size: rem(18);
+      text-decoration: none;
+
+      svg {
+        vertical-align: middle;
+        margin-left: rem(12);
+        position: relative;
+        transition: all 0.225s ease;
+        left: 0;
+      }
+
+      &:hover {
+        svg {
+          left: rem(8);
+        }
+      }
+
+      span {
+        border-bottom: 1px solid black;
+      }
+    }
+
     &__about {
       position: relative;
       padding-bottom: rem(20);
@@ -102,11 +128,11 @@
       padding: 0 rem(20);
 
       @include breakpoint(md) {
-        padding: 0 0 0 rem(40);
+        padding: 0 0 0 rem(20);
       }
 
       @include breakpoint(lg) {
-        padding: 0 0 0 rem(40);
+        padding: 0 0 0 rem(60);
       }
     }
 
@@ -120,7 +146,7 @@
       padding: 0 rem(20);
 
       @include breakpoint(md) {
-        padding: 0 rem(40) 0 0;
+        padding: 0 rem(20) 0 0;
       }
 
       @include breakpoint(lg) {

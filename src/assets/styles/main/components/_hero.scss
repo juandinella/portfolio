@@ -12,7 +12,7 @@
   .container {
     max-width: rem(706);
     padding: 0 rem(30);
-
+    margin-top: rem(-10);
   }
 
   h1 {
@@ -31,7 +31,7 @@
 
     @include breakpoint(md) {
       font-size: rem(18);
-      margin-bottom: rem(30);
+      margin-bottom: rem(28);
     }
   }
 
@@ -90,7 +90,7 @@
 
 .scroll {
   position: absolute;
-  bottom: 2%;
+  bottom: 1%;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -100,5 +100,20 @@
 
   @include breakpoint(md) {
     display: block;
+  }
+}
+
+
+.contact {
+  margin-top: rem(30);
+  text-decoration: none;
+  border: rem(2) solid $black;
+  display: table;
+  padding: rem(10) rem(72);
+  transition: all 0.225s ease;
+
+  &:hover {
+    color: $white;
+    background-color: $black;
   }
 }
