@@ -1,6 +1,10 @@
 .work {
   &--pixel {
-    margin-top: rem(140);
+    margin-top: rem(60);
+
+    @include breakpoint(md) {
+      margin-top: rem(140);
+    }
   }
 }
 

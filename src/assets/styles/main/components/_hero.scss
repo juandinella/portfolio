@@ -108,12 +108,14 @@
   margin-top: rem(30);
   text-decoration: none;
   border: rem(2) solid $black;
+  color: $white;
+  background-color: $black;
   display: table;
-  padding: rem(10) rem(72);
+  padding: rem(12) rem(72);
   transition: all 0.225s ease;
 
   &:hover {
-    color: $white;
-    background-color: $black;
+    color: $black;
+    background-color: $white;
   }
 }
