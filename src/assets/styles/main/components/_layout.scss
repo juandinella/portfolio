@@ -5,3 +5,12 @@
   max-width: rem(1650);
   width: 100%;
 }
+
+.container-fluid {
+  margin: 0 auto;
+  max-width: 100%;
+
+  [class*='col-'] {
+    padding: 0;
+  }
+}

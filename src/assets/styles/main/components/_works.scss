@@ -61,8 +61,10 @@
       font-weight: 700;
       margin-bottom: rem(10);
       line-height: 1;
+
       @include breakpoint(md) {
         font-size: rem(80);
+        margin-bottom: rem(20);
       }
     }
 
@@ -151,6 +153,28 @@
         @include breakpoint(md) {
           position: absolute;
         }
+      }
+    }
+  }
+
+  &--center {
+    height: auto;
+    padding-bottom: rem(50);
+
+    @include breakpoint(md) {
+      padding-bottom: rem(100);
+    }
+
+    .work--text {
+      margin: 0 auto;
+      text-align: center;
+      max-width: 100%;
+
+      p {
+        width: 100%;
+        max-width: rem(580);
+        margin: 0 auto;
+        margin-top: rem(15);
       }
     }
   }
