@@ -16,10 +16,10 @@
   }
 
   h1 {
-    /* font-weight: 700; */
     font-size: rem(60);
     margin-bottom: rem(14);
     line-height: 1;
+
     @include breakpoint(md) {
       font-size: rem(100);
     }
@@ -27,7 +27,6 @@
 
   p {
     font-size: rem(16);
-    line-height: 1.5;
     margin-bottom: rem(20);
 
     @include breakpoint(md) {

@@ -10,23 +10,33 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  h1 {
-    font-weight: 900;
-  }
+  .hero {
 
-  p {
-    font-weight: 600;
+    h1 {
+      font-weight: 800;
+      letter-spacing: rem(4);
+    }
+
+    p {
+      line-height: 1.6;
+      font-weight: 600;
+    }
   }
 
   &.futura-loaded {
     font-family: $font;
 
-    h1 {
-      font-weight: 700;
-    }
+    .hero {
 
-    p {
-      font-weight: 500;
+      h1 {
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+
+      p {
+        line-height: 1.5;
+        font-weight: 500;
+      }
     }
   }
 }
