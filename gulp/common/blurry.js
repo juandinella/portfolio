@@ -8,7 +8,7 @@ const blurry = new BlurryPug({
   compiledPath: 'assets/images'
 })
 
-const blur = (name, alt) => {
+const blur = (name, responsive, alt) => {
   const raw = blurry.blur(name)
   const $ = cheerio.load(raw)
 
