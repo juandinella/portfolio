@@ -1,7 +1,7 @@
 {
   "short_name": "Portfolio",
   "name": "Juan Di Nella's portfolio",
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#FFFFFF",
   "theme_color": "#000000",
