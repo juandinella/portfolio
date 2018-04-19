@@ -8,20 +8,18 @@ const blurry = new BlurryPug({
   compiledPath: 'assets/images'
 })
 
-// const blur = (name) => {
-//   const raw = blurry.blur(name)
-//   const $ = cheerio.load(raw)
-//
-//   const img = $('img')
-//
-//   if (alt) {
-//     img.attr('alt', alt)
-//   } else {
-//     img.attr('alt', 'An image')
-//   }
-//   return $('body').html()
-// }
+const blur = (name, alt) => {
+  const raw = blurry.blur(name)
+  const $ = cheerio.load(raw)
 
-const blur = name => blurry.blur(name)
+  const img = $('img')
+
+  if (alt) {
+    img.attr('alt', alt)
+  } else {
+    img.attr('alt', 'An image')
+  }
+  return $('body').html()
+}
 
 module.exports = blur
