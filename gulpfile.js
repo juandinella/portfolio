@@ -13,7 +13,8 @@ const development = [
 ]
 const production = [
   'minifyStyles', 'purify',
-  'styles-production', 'zip'
+  'styles-production', 'zip',
+  'critical'
 ]
 
 common.forEach(file => require(`./gulp/common/${file}`))
@@ -25,6 +26,7 @@ const prodTasks = [
   'minifyStyles',
   'purify',
   'zip',
+  'critical'
 ]
 
 let tasks = [
