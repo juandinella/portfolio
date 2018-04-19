@@ -111,8 +111,9 @@
   color: $white;
   background-color: $black;
   display: table;
-  padding: rem(12) rem(72);
+  padding: rem(12) rem(70);
   transition: all 0.225s ease;
+  font-size: rem(18);
 
   &:hover {
     color: $black;
