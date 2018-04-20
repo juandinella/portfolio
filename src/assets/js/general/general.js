@@ -17,6 +17,10 @@ const general = () => {
   document.getElementById('scroll').addEventListener('click', () => {
     scrollTo(document.getElementById('works'));
   });
+
+  document.getElementById('magic').addEventListener('click', () => {
+    scrollTo(document.getElementById('hero'));
+  });
 }
 
 export default general
