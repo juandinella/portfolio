@@ -3,6 +3,7 @@
   padding: rem(60) 0;
   margin: rem(20) 0;
   height: auto;
+  overflow: hidden;
 
   @include breakpoint(md) {
     height: rem(1200);
@@ -26,6 +27,7 @@
   }
 
   &--img {
+    box-shadow: 0 0 50px 0 rgba(0,0,0,0.30);
     img {
       max-width: 100%;
       filter: gray;
@@ -57,7 +59,7 @@
     }
 
     h2 {
-      font-size: rem(50);
+      font-size: rem(48);
       font-weight: 700;
       margin-bottom: rem(10);
       line-height: 1;
@@ -129,7 +131,7 @@
 
   &--even {
     .container {
-      padding: 0 rem(20);
+      padding: 0 rem(10);
 
       @include breakpoint(md) {
         padding: 0 0 0 rem(20);
@@ -147,7 +149,7 @@
 
   &--odd {
     .container {
-      padding: 0 rem(20);
+      padding: 0 rem(10);
 
       @include breakpoint(md) {
         padding: 0 rem(20) 0 0;
@@ -213,12 +215,11 @@
 .edge {
   display: flex;
   position: static;
-  overflow: hidden;
-  padding: 0;
-  box-shadow: 0 0 50px 0 rgba(0,0,0,0.30);
+  padding: 0 rem(10);
 
   @include breakpoint(md) {
     position: absolute;
+    padding: 0;
   }
 }
 
