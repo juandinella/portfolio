@@ -11,7 +11,7 @@ function canvas () {
   const canvasWidth = canvas.width
   const canvasHeight = canvas.height
 
-  const maxRadius = 35
+  const radiusMax = 35
 
   canvas.onmousemove = function (e) {
     mouseX = e.clientX
@@ -67,16 +67,14 @@ function canvas () {
         this.yVelocity = -this.yVelocity
       }
 
-      // Radius Decrease Functions
-      // When distance between circle center and mouse on horizontal axis is less than 50, increase radius until it is equal to 35
       if (
         xDistance < 50 &&
         xDistance > -50 &&
-        this.radius < maxRadius &&
+        this.radius < radiusMax &&
         yDistance < 50 &&
         yDistance > -50
       ) {
-        this.radius += 2
+        this.radius += 10
       } else if (
         (xDistance >= 50 && originalRadius < this.radius) ||
         (xDistance <= -50 && originalRadius < this.radius) ||
@@ -103,7 +101,13 @@ function canvas () {
     }
   }
 
-  const colorArray = ['#272F32', '#9DBDC6', '#FF3D2E', '#DAEAEF']
+  const colorArray = [
+    '#000000',
+    '#74C0C0',
+    '#CE4841',
+    '#F6AA3D'
+  ]
+
   const myCircle = new Circle(30, 80, 10)
   let circleArray = []
 

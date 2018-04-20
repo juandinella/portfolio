@@ -3,9 +3,13 @@
   padding: rem(50) 0;
 }
 
-
 #magic {
   cursor: pointer;
+  display: inline-block;
   position: relative;
   z-index: 2;
+
+  h4 {
+    font-size: rem(20);
+  }
 }

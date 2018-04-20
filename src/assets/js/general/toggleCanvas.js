@@ -15,6 +15,7 @@ function toggleCanvas (element, className) {
 
 document.getElementById('magic').addEventListener('click', function () {
   toggleCanvas(document.getElementById('canvas'), 'is-visible');
+  toggleCanvas(document.querySelector('body'), 'magic');
 });
 
 export default toggleCanvas

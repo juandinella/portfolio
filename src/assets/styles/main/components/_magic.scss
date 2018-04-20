@@ -1,0 +1,30 @@
+body {
+  &.magic {
+
+    h1 {
+      color: $red;
+    }
+
+    h2 {
+      color: $light-blue;
+    }
+
+    .work--img,
+    .pixel-block {
+      img {
+        filter: none;
+        -webkit-filter: grayscale(0);
+      }
+    }
+
+    .hero {
+      ul {
+        .tw a svg {stroke: #00aced;}
+        .fb a svg {stroke: #3B5998;}
+        .ig a svg {stroke: #8a49a1;}
+        .in a svg {stroke: #4875B4;}
+        .gh a svg {stroke: #333333;}
+      }
+    }
+  }
+}
