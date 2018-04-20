@@ -1,11 +1,13 @@
 import asyncFonts from '../tools/async-fonts'
 import lazyImages from './lazyImages'
 import scrollTo from './scroll'
-// import canvas from './canvas'
+import toggleCanvas from './toggleCanvas'
+import canvas from './canvas'
 
 const general = () => {
   lazyImages()
-  // canvas()
+  toggleCanvas()
+  canvas()
 
   asyncFonts({
     href: 'assets/css/fonts.css',

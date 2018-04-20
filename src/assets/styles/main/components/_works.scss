@@ -190,12 +190,9 @@
   }
 
   &--center {
-    height: auto;
-    padding-bottom: rem(50);
-
-    @include breakpoint(md) {
-      padding-bottom: rem(100);
-    }
+    min-height: auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
 
     .work--text {
       margin: 0 auto;

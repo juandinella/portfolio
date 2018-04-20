@@ -1,24 +1,12 @@
-#magic {
-  margin-top: 15px;
-  cursor: pointer;
-}
-
-#canvas {
-  display: none;
-
-  &.is-visible {
-    display: block;
-  }
-}
-
 .hero {
   height: auto;
   display: flex;
   align-items: center;
   padding: rem(30) 0;
+  position: relative;
 
   @include breakpoint(md) {
-    height: 100%;
+    height: 100vh;
     padding: 0;
   }
 
