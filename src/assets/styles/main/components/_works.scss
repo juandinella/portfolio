@@ -191,8 +191,8 @@
 
   &--center {
     min-height: auto;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
 
     .work--text {
       margin: 0 auto;
