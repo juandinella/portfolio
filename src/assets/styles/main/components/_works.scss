@@ -28,6 +28,7 @@
 
   &--img {
     box-shadow: 0 0 50px 0 rgba(0,0,0,0.30);
+
     img {
       max-width: 100%;
       filter: gray;
@@ -52,6 +53,10 @@
   &--text {
     max-width: 100%;
     margin-bottom: rem(30);
+    background-color: rgba($white, 0.5);
+    box-shadow: 1px 2px 3px rgba($white,.5);
+    position: relative;
+    z-index: 1;
 
     @include breakpoint(md) {
       max-width: rem(460);
@@ -197,7 +202,7 @@
     .work--text {
       margin: 0 auto;
       text-align: center;
-      max-width: 100%;
+      max-width: rem(640);
 
       p {
         width: 100%;
