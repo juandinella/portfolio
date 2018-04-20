@@ -2,11 +2,11 @@
   position: relative;
   padding: rem(60) 0;
   margin: rem(20) 0;
-  height: auto;
+  min-height: auto;
   overflow: hidden;
 
   @include breakpoint(md) {
-    height: rem(1200);
+    min-height: rem(1200);
     padding: rem(130) 0;
   }
 

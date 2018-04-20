@@ -1,7 +1,7 @@
 .work {
   &--pixel {
     margin-top: rem(60);
-
+    border-bottom: rem(2) solid $black;
     @include breakpoint(md) {
       margin-top: rem(140);
     }
