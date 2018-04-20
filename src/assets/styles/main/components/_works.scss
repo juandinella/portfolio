@@ -75,6 +75,10 @@
       @include breakpoint(md) {
         font-size: rem(18);
       }
+
+      em {
+        font-style: italic;
+      }
     }
 
     a {
