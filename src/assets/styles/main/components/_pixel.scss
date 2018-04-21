@@ -29,6 +29,22 @@
     min-height: 100%;
     max-width: 100%;
     object-fit: cover;
+
+    @include breakpoint(sm) {
+      min-width: rem(270);
+    }
+
+    @include breakpoint(md) {
+      min-width: rem(250);
+    }
+
+    @include breakpoint(lg) {
+      min-width: rem(340);
+    }
+
+    @include breakpoint(xl) {
+      min-width: rem(480);
+    }
   }
 
   figcaption {
