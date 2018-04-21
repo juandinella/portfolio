@@ -5,13 +5,32 @@ function canvas () {
   let mouseX
   let mouseY
 
-  canvas.height = window.innerHeight
-  canvas.width = window.innerWidth
+  let canvasWidth = canvas.width = window.innerWidth
+  let canvasHeight = canvas.height = window.innerHeight
 
-  const canvasWidth = canvas.width
-  const canvasHeight = canvas.height
+  // particles amount
+  const count = 600
 
-  const radiusMax = 35
+  // Particles min size
+  const minSize = 1
+
+  // Particles max size
+  const maxSize = 4
+
+  // Size when max is on
+  const radiusMax = 30
+
+  // size when cursor is on
+  const cursorSize = 60
+
+  // Velocity in on
+  const increase = 6
+
+  // Max velocity
+  const maxVel = 0.8
+
+  // Probability circle to rect (0 to 1)
+  const prob = 0.4
 
   canvas.onmousemove = function (e) {
     mouseX = e.clientX
@@ -19,69 +38,56 @@ function canvas () {
   }
 
   window.addEventListener('resize', function () {
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
+    canvasWidth = canvas.width = window.innerWidth
+    canvasHeight = canvas.height = window.innerHeight
   })
 
-  function Circle (xCoordinate, yCoordinate, radius) {
-    const randomNumber = Math.floor(Math.random() * 4)
-    const randomTrueOrFalse = Math.floor(Math.random() * 2)
+  function Circle (x, y, r) {
+    this.x = x
+    this.y = y
+    this.r = r
+    this.or = r;
+    this.color = colorArray[Math.floor(Math.random() * 4)]
+    this.form = Math.floor(Math.random() + prob);
 
-    this.xCoordinate = xCoordinate
-    this.yCoordinate = yCoordinate
-    this.radius = radius
-    this.color = colorArray[randomNumber]
-
-    if (randomTrueOrFalse === 1) {
-      this.xVelocity = -Math.random() * 1
+    if (Math.random() < 0.5) {
+      this.velX = -Math.random() * maxVel
     } else {
-      this.xVelocity = Math.random() * 1
+      this.velX = +Math.random() * maxVel
     }
 
-    if (randomTrueOrFalse === 1) {
-      this.yVelocity = -Math.random() * 1
+    if (Math.random() < 0.5) {
+      this.velY = -Math.random() * maxVel
     } else {
-      this.yVelocity = Math.random() * 1
+      this.velY = +Math.random() * maxVel
     }
-
-    // As distance gets closer to 0, increase radius
 
     this.update = function () {
-      this.xCoordinate += this.xVelocity
-      const xDistance = mouseX - this.xCoordinate
-      const yDistance = mouseY - this.yCoordinate
-      const originalRadius = radius
-      this.yCoordinate += this.yVelocity
+      this.x += this.velX
+      this.y += this.velY
 
-      // Movement Functions
-      if (
-        this.xCoordinate + this.radius > canvasWidth ||
-        this.xCoordinate - this.radius < 0
-      ) {
-        this.xVelocity = -this.xVelocity
+      if (this.x + this.r > canvasWidth || this.x - this.r < 0) {
+        this.velX = -this.velX
       }
-      if (
-        this.yCoordinate + this.radius > canvasHeight ||
-        this.yCoordinate - this.radius < 0
-      ) {
-        this.yVelocity = -this.yVelocity
+      if (this.y + this.r > canvasHeight || this.y - this.r < 0) {
+        this.velY = -this.velY
       }
 
-      if (
-        xDistance < 50 &&
-        xDistance > -50 &&
-        this.radius < radiusMax &&
-        yDistance < 50 &&
-        yDistance > -50
-      ) {
-        this.radius += 10
-      } else if (
-        (xDistance >= 50 && originalRadius < this.radius) ||
-        (xDistance <= -50 && originalRadius < this.radius) ||
-        (yDistance >= 50 && originalRadius < this.radius) ||
-        (yDistance <= -50 && originalRadius < this.radius)
-      ) {
-        this.radius -= 2
+      let disX = Math.abs(mouseX - this.x)
+      let disY = Math.abs(mouseY - this.y)
+
+      let on = disX < cursorSize && disY < cursorSize;
+      let dis = 0;
+
+      if (on) {
+        dis = Math.sqrt(Math.pow(disX, 2) + Math.pow(disY, 2)) / cursorSize;
+        if (dis > 1) on = false;
+      }
+
+      if (on) {
+        if (this.r < radiusMax) this.r += increase * (1 - dis);
+      } else if (this.or < this.r) {
+        this.r -= increase * 0.1;
       }
 
       this.draw()
@@ -89,13 +95,22 @@ function canvas () {
 
     this.draw = function () {
       c.beginPath()
-      c.arc(
-        this.xCoordinate,
-        this.yCoordinate,
-        Math.abs(this.radius),
-        0,
-        Math.PI * 2
-      )
+      if (this.form === 0) {
+        c.arc(
+          this.x,
+          this.y,
+          Math.abs(this.r),
+          0,
+          Math.PI * 2
+        )
+      }
+      if (this.form === 1) {
+        let r = this.r;
+        c.moveTo(this.x - r, this.y);
+        c.lineTo(this.x, this.y - r);
+        c.lineTo(this.x + r, this.y);
+        c.lineTo(this.x, this.y + r);
+      }
       c.fillStyle = this.color
       c.fill()
     }
@@ -108,23 +123,19 @@ function canvas () {
     '#F6AA3D'
   ]
 
-  const myCircle = new Circle(30, 80, 10)
-  let circleArray = []
+  let circles = []
 
-  for (let i = 0; i < 800; i++) {
-    const randomXCoordinate = Math.random() * canvasWidth
-    const randomYCoordinate = Math.random() * canvasHeight
-    const randomRadius = Math.random() * 5
-    circleArray.push(
-      new Circle(randomXCoordinate, randomYCoordinate, randomRadius)
-    )
+  for (let i = 0; i < count; i++) {
+    const x = Math.random() * canvasWidth
+    const y = Math.random() * canvasHeight
+    const s = minSize + (maxSize - minSize) * Math.random();
+    circles.push(new Circle(x, y, s))
   }
 
   function updateAll () {
     c.clearRect(0, 0, canvasWidth, canvasHeight)
-    myCircle.update()
-    for (let i = 0; i < circleArray.length; i++) {
-      circleArray[i].update()
+    for (let i = 0; i < circles.length; i++) {
+      circles[i].update()
     }
     window.requestAnimationFrame(updateAll)
   }
