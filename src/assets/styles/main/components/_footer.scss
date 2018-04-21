@@ -8,6 +8,11 @@
   display: inline-block;
   position: relative;
   z-index: 2;
+  transition: all 0.225s ease;
+
+  &:hover {
+    color: $red;
+  }
 
   h4 {
     font-size: rem(18);
