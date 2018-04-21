@@ -3,8 +3,8 @@ function toggleCanvas (element, className) {
     return;
   }
 
-  var classString = element.className
-  var nameIndex = classString.indexOf(className);
+  let classString = element.className
+  let nameIndex = classString.indexOf(className);
   if (nameIndex === -1) {
     classString += ' ' + className;
   } else {
@@ -13,9 +13,18 @@ function toggleCanvas (element, className) {
   element.className = classString;
 }
 
-document.getElementById('magic').addEventListener('click', function () {
+const toggle = document.getElementById('magic');
+const text = document.getElementById('magic-text');
+
+toggle.addEventListener('click', function () {
   toggleCanvas(document.getElementById('canvas'), 'is-visible');
   toggleCanvas(document.querySelector('body'), 'magic');
-});
+  if (text.getAttribute('data-text-swap') === text.innerHTML) {
+    text.innerHTML = text.getAttribute('data-text-original');
+  } else {
+    text.setAttribute('data-text-original', text.innerHTML);
+    text.innerHTML = text.getAttribute('data-text-swap');
+  }
+}, false);
 
 export default toggleCanvas

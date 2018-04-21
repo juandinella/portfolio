@@ -9,16 +9,16 @@ function canvas () {
   let canvasHeight = canvas.height = window.innerHeight
 
   // particles amount
-  const count = 600
+  const count = 620
 
   // Particles min size
-  const minSize = 1
+  const minSize = 2
 
   // Particles max size
   const maxSize = 4
 
   // Size when max is on
-  const radiusMax = 30
+  const radiusMax = 35
 
   // size when cursor is on
   const cursorSize = 60
