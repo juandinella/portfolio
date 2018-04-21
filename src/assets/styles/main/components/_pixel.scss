@@ -15,10 +15,20 @@
 
 .pixel-block {
   border: rem(2) solid $white;
+  height: rem(320);
+
+  @include breakpoint(sm) {
+    height: auto;
+  }
 
   figure {
     position: relative;
     margin: 0;
+    height: rem(320);
+
+    @include breakpoint(sm) {
+      height: auto;
+    }
   }
 
   img {
@@ -58,8 +68,14 @@
     visibility: hidden;
     transition: all 0.225s ease;
     color: $white;
-    padding-top: rem(50);
+    padding-top: rem(25);
+    padding-left: rem(10);
+    padding-right: rem(10);
     text-align: center;
+
+    @include breakpoint(sm) {
+      padding-top: rem(50);
+    }
 
 
     h3 {
@@ -96,9 +112,13 @@
       text-decoration: underline;
       font-size: rem(26);
       position: absolute;
-      bottom: rem(60);
+      bottom: rem(25);
       left: 0;
       right: 0;
+
+      @include breakpoint(sm) {
+        bottom: rem(60);
+      }
 
       @include breakpoint(md) {
         font-size: rem(32);

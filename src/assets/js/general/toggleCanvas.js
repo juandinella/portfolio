@@ -5,6 +5,7 @@ function toggleCanvas (element, className) {
 
   let classString = element.className
   let nameIndex = classString.indexOf(className);
+
   if (nameIndex === -1) {
     classString += ' ' + className;
   } else {

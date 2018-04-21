@@ -10,6 +10,10 @@
   z-index: 2;
 
   h4 {
-    font-size: rem(20);
+    font-size: rem(18);
+
+    @include breakpoint(sm) {
+      font-size: rem(20);
+    }
   }
 }
