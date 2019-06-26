@@ -86,6 +86,13 @@
       em {
         font-style: italic;
       }
+
+      a {
+        margin-top: 0;
+        display: inline-block;
+        // border-bottom: 1px solid black;
+        text-decoration: underline;
+      }
     }
 
     a {
