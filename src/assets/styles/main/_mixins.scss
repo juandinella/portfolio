@@ -3,9 +3,7 @@
     @media (min-width: map-get($breakpoints, $breakpoint)) {
       @content;
     }
-  }
-
-  @else {
+  } @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
     + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
@@ -15,13 +13,17 @@
   @return $column-num / $columns * 100%;
 }
 
-@mixin flexGrid($gutter: $column-gutter, $total: $columns, $sizes: $breakpoints) {
+@mixin flexGrid(
+  $gutter: $column-gutter,
+  $total: $columns,
+  $sizes: $breakpoints
+) {
   .row {
     display: flex;
     flex-flow: row wrap;
   }
 
-  [class*='col-']{
+  [class*="col-"] {
     padding: 0 $column-gutter / 2;
   }
 
@@ -34,7 +36,7 @@
           flex-basis: #{$i / $columns * 100%};
         }
       }
-      .col-#{$key}-offset-#{$i}{
+      .col-#{$key}-offset-#{$i} {
         @include breakpoint($key) {
           margin-left: get-col-percent($i);
         }
@@ -42,7 +44,6 @@
     }
   }
 }
-
 
 $browser-context: 16;
 

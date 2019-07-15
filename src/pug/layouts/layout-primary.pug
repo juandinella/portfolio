@@ -1,8 +1,8 @@
 doctype html
-html(lang='en')
+html(lang='en', dir='ltr')
   head
     block title
-      title Juan Di Nella - Web designer and frontend developer 
+      title Juan Di Nella - Web designer and frontend developer
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name="viewport" content="width=device-width, initial-scale=1")
@@ -11,7 +11,7 @@ html(lang='en')
     link(rel='manifest' href='assets/head/manifest.json')
     link(rel="shortcut icon" href="assets/head/favicon.ico")
     link(rel="icon" type="image/png" href="assets/head/favicon.png")
-      
+
     meta(property='og:title', content='Juan Di Nella web designer and frontend developer')
     meta(property='og:description', content='I’m a 27-year-old Argentinian-Italian web designer and frontend developer living in Buenos Aires and looking forward to moving to Europe. I’m a really curious person, and in spite of having a university degree, I consider myself a self-taught person constantly learning and always looking for new things to improve.')
     meta(property='og:type', content='website')
@@ -19,7 +19,7 @@ html(lang='en')
     meta(property='og:site_name', content='Juan Di Nella')
     meta(property='og:image', content='https://www.juandinella.com/assets/images/web.jpg')
 
-      
+
     if production
       link(rel='stylesheet', href='assets/css/main.min.css')
     else

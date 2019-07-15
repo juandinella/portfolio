@@ -11,7 +11,7 @@
   }
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -27,13 +27,13 @@
   }
 
   &--img {
-    box-shadow: 0 0 50px 0 rgba(0,0,0,0.30);
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3);
 
     img {
       max-width: 100%;
       filter: gray;
       -webkit-filter: grayscale(1);
-      -webkit-transition: all .2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
       vertical-align: text-bottom;
 
       @include breakpoint(md) {
@@ -54,7 +54,7 @@
     max-width: 100%;
     margin-bottom: rem(30);
     background-color: rgba($white, 0.5);
-    box-shadow: 1px 2px 3px rgba($white,.5);
+    box-shadow: 1px 2px 3px rgba($white, 0.5);
     position: relative;
     z-index: 1;
 
@@ -126,7 +126,7 @@
       padding-bottom: rem(20);
 
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         left: 0;
@@ -168,7 +168,7 @@
       }
 
       @include breakpoint(lg) {
-        padding: 0 rem(60) 0 0 ;
+        padding: 0 rem(60) 0 0;
       }
     }
 
@@ -231,7 +231,6 @@
     padding: 0;
   }
 }
-
 
 .mla {
   margin-left: auto;

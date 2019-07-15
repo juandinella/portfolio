@@ -3,17 +3,16 @@
 // =======================================
 
 // Typography
-$system-fonts: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-$font: 'futura';
-
+$system-fonts: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+  "Helvetica Neue", sans-serif;
+$font: "futura";
 
 // Colors
-$black: black;
-$white: white;
-$red: #CE4841;
-$yellow: #F6AA3D;
-$light-blue: #74C0C0;
-
+$black: #000000;
+$white: #ffffff;
+$red: #ce4841;
+$yellow: #f6aa3d;
+$light-blue: #74c0c0;
 
 // Breakpoints
 $breakpoints: (
@@ -21,7 +20,7 @@ $breakpoints: (
   sm: 30em,
   md: 64em,
   lg: 86em,
-  xl: 121em,
+  xl: 121em
 ) !default;
 
 $columns: 12;

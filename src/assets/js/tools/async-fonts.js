@@ -1,7 +1,6 @@
 import FontFaceObserver from 'fontfaceobserver'
 
 const asyncFonts = async ({ href, observer }) => {
-  // Load href from somewhere...
   if (href) {
     const link = document.createElement('link')
     link.href = href
