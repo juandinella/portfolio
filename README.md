@@ -1,7 +1,7 @@
 # portfolio
 
 ## Installing dependencies & running up
-To work, the **Pixel2HTML Boilerplate** needs to install some dependencies to run the options you select.
+It eeds to install some dependencies to run the options you select.
 For this job, run this command in your shell
 
 ```
