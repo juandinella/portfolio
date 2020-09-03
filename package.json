@@ -31,7 +31,7 @@
     "fs-path": "^0.0.24",
     "gulp": "^4.0.0",
     "gulp-zip": "^4.1.0",
-    "lazysizes": "^4.0.2",
+    "lazysizes": "^5.2.1",
     "lqip-pug": "^1.0.2",
     "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^4.5.0",
