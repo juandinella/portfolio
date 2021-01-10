@@ -14,8 +14,9 @@
     color: $red;
   }
 
-  h4 {
+  p {
     font-size: rem(18);
+    font-weight: 700;
 
     @include breakpoint(sm) {
       font-size: rem(20);

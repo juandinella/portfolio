@@ -8,8 +8,7 @@ gulp.task('critical', () =>
   gulp.src(markup + '/*.html')
     .pipe(critical({
       base: markup,
-      inline: true,
-      timeout: 120000
+      inline: true
     }))
     .on('error', config.onError)
     .pipe(gulp.dest(markup))
