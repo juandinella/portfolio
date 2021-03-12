@@ -42,7 +42,7 @@
   "devDependencies": {
     "@pixel2html/stylelint-config": "^1.5.3",
     "browser-sync": "^2.26.7",
-    "react-dev-utils": "^9.0.1",
+    "react-dev-utils": "^11.0.4",
     "stylelint": "^13.8.0",
     "webpack-bundle-analyzer": "^3.3.2"
   },
