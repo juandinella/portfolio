@@ -29,7 +29,7 @@
     "eslint": "^7.8.1",
     "eslint-loader": "^2.0.0",
     "fontfaceobserver": "^2.0.13",
-    "fs-path": "^0.0.24",
+    "fs-path": "^0.0.25",
     "gulp": "^4.0.0",
     "gulp-zip": "^4.1.0",
     "lazysizes": "^5.3.0",
